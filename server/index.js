@@ -1,7 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
+import literatureRouter from "./routes/literature.route.js";
 const app = express();
+
+app.use("/api/literature/", literatureRouter);
+
 app.get("/", (req, res) => {
   res.send("Server is working");
 });
