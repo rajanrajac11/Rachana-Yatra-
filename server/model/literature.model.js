@@ -6,6 +6,10 @@ const literatureSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: false,
+    },
     author: {
       type: String,
       required: true,
