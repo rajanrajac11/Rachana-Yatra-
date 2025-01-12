@@ -42,16 +42,10 @@ function FeedCard({
       </h2>
 
       {/* Content */}
-      <div className="bg-[#FFF9F1] px-4 py-6 rounded-lg shadow-md border border-[#EADBCB] text-left w-full md:w-3/4">
-        {content.split("\n").map((paragraph, index) => (
-          <p
-            key={index}
-            className="text-sm md:text-lg text-[#4E342E] leading-relaxed font-serif mb-4"
-          >
-            {paragraph}
-          </p>
-        ))}
-      </div>
+      <div
+        className="bg-[#FFF9F1] px-4 py-6 rounded-lg shadow-md border border-[#EADBCB] text-left w-full md:w-3/4"
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></div>
     </div>
   );
 }
