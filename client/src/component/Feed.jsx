@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import FeedCard from "./FeedCard";
 
 function Feed() {
   return (
-    <div>Feed</div>
-  )
+    <div>
+      <FeedCard />
+    </div>
+  );
 }
 
-export default Feed
+export default Feed;
