@@ -10,8 +10,9 @@ import Login from "./Login.jsx";
 import Signup from "./Signup.jsx";
 import Explore from "./Explore.jsx";
 import FeedCard from "./FeedCard.jsx";
+import Lcard from "./Lcard.jsx";
 
 
 
 
-export {Logo,Approve,Feed,Home,Profile,Share,Header,Footer, Login, Signup, Explore,FeedCard};
+export {Logo,Approve,Feed,Home,Profile,Share,Header,Footer, Login, Signup, Explore,FeedCard,Lcard};
