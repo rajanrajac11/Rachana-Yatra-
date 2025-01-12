@@ -14,8 +14,8 @@ function Header() {
 
       {/* Navigation Section */}
       <div className="flex space-x-14">
-        <NavLink to={"/"}>
-          <div className="text-xl cursor-pointer flex flex-col items-center ">
+        <NavLink to={"/"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
+          <div className="text-xl cursor-pointer flex flex-col items-center">
             <div role="img" aria-label="Home" className="mb-1">
               🏠
             </div>
@@ -23,16 +23,16 @@ function Header() {
           </div>
         </NavLink>
 
-        <NavLink to={"/feed"}>
+        <NavLink to={"/feed"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
           <div className="text-xl cursor-pointer flex flex-col items-center">
-            <div role="img" aria-label="Menu" className="msb-1">
+            <div role="img" aria-label="Feed" className="mb-1">
               📰
             </div>
             <div>Feed</div>
           </div>
         </NavLink>
 
-        <NavLink to={"/share"}>
+        <NavLink to={"/share"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
           <div className="text-xl cursor-pointer flex flex-col items-center">
             <div role="img" aria-label="Share" className="mb-1">
               🔗
@@ -41,7 +41,7 @@ function Header() {
           </div>
         </NavLink>
 
-        <NavLink to={"/explore"}>
+        <NavLink to={"/explore"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
           <div className="text-xl cursor-pointer flex flex-col items-center">
             <div role="img" aria-label="Explore" className="mb-1">
               🌐
@@ -52,7 +52,7 @@ function Header() {
       </div>
 
       {/* Profile Section */}
-      <div className="text-xl cursor-pointer flex flex-col items-center">
+      <div className="text-xl cursor-pointer flex flex-col items-center transition-all duration-300 hover:scale-95 hover:text-blue-500">
         <div role="img" aria-label="Profile" className="mb-1">
           👤
         </div>
