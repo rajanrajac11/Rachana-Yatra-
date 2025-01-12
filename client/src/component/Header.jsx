@@ -14,7 +14,10 @@ function Header() {
 
       {/* Navigation Section */}
       <div className="flex space-x-14">
-        <NavLink to={"/"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
+        <NavLink
+          to={"/"}
+          className="transition-all duration-300 hover:scale-95 hover:text-blue-500"
+        >
           <div className="text-xl cursor-pointer flex flex-col items-center">
             <div role="img" aria-label="Home" className="mb-1">
               🏠
@@ -23,7 +26,10 @@ function Header() {
           </div>
         </NavLink>
 
-        <NavLink to={"/feed"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
+        <NavLink
+          to={"/feed"}
+          className="transition-all duration-300 hover:scale-95 hover:text-blue-500"
+        >
           <div className="text-xl cursor-pointer flex flex-col items-center">
             <div role="img" aria-label="Feed" className="mb-1">
               📰
@@ -32,7 +38,10 @@ function Header() {
           </div>
         </NavLink>
 
-        <NavLink to={"/share"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
+        <NavLink
+          to={"/share"}
+          className="transition-all duration-300 hover:scale-95 hover:text-blue-500"
+        >
           <div className="text-xl cursor-pointer flex flex-col items-center">
             <div role="img" aria-label="Share" className="mb-1">
               🔗
@@ -41,12 +50,24 @@ function Header() {
           </div>
         </NavLink>
 
-        <NavLink to={"/explore"} className="transition-all duration-300 hover:scale-95 hover:text-blue-500">
+        <NavLink
+          to={"/explore"}
+          className="transition-all duration-300 hover:scale-95 hover:text-blue-500"
+        >
           <div className="text-xl cursor-pointer flex flex-col items-center">
             <div role="img" aria-label="Explore" className="mb-1">
               🌐
             </div>
             <div>Explore</div>
+          </div>
+        </NavLink>
+        <NavLink
+          to={"/approve"}
+          className="transition-all duration-300 hover:scale-95 hover:text-blue-500"
+        >
+          <div className="text-xl cursor-pointer flex flex-col items-center">
+            <div role="img" aria-label="Explore" className="mb-1"></div>
+            <div>Approve</div>
           </div>
         </NavLink>
       </div>
