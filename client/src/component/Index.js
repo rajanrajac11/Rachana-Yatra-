@@ -10,8 +10,24 @@ import Login from "./Login.jsx";
 import Signup from "./Signup.jsx";
 import Explore from "./Explore.jsx";
 import FeedCard from "./FeedCard.jsx";
+import Input from "./Input.jsx";
+import Select from "./Select.jsx";
+import RTE from "./RTE.jsx";
 
-
-
-
-export {Logo,Approve,Feed,Home,Profile,Share,Header,Footer, Login, Signup, Explore,FeedCard};
+export {
+  Logo,
+  Approve,
+  Feed,
+  Home,
+  Profile,
+  Share,
+  Header,
+  Footer,
+  Login,
+  Signup,
+  Explore,
+  FeedCard,
+  Input,
+  Select,
+  RTE,
+};
