@@ -20,13 +20,6 @@ function Lcard() {
         reasonable confidence in your own powers, you cannot be successful or
         happy.
       </p>
-
-      {/* Footer Links */}
-      <div className="mt-auto text-sm text-gray-500">
-        <p>Privacy · Terms · Advertising</p>
-        <p>Ad Choices · Cookies · More</p>
-        <p>Meta © 2025</p>
-      </div>
     </div>
   );
 }
