@@ -6,38 +6,49 @@ function Header() {
   return (
     <div className="w-screen h-16 bg-[#FFF2D3] m-0 flex justify-between items-center px-4">
       {/* Logo Section */}
-      <div className="flex items-center">
-        <img src={logo} alt="Logo" className="h-16 w-auto" />
-      </div>
+      <NavLink to={"/"}>
+        <div className="flex items-center">
+          <img src={logo} alt="Logo" className="h-16 w-auto" />
+        </div>
+      </NavLink>
 
       {/* Navigation Section */}
       <div className="flex space-x-14">
         <NavLink to={"/"}>
-          <div className="text-xl cursor-pointer flex flex-col items-center">
+          <div className="text-xl cursor-pointer flex flex-col items-center ">
             <div role="img" aria-label="Home" className="mb-1">
               🏠
             </div>
             <div>Home</div>
           </div>
         </NavLink>
-        <div className="text-xl cursor-pointer flex flex-col items-center">
-          <div role="img" aria-label="Menu" className="msb-1">
-            📰
+
+        <NavLink to={"/feed"}>
+          <div className="text-xl cursor-pointer flex flex-col items-center">
+            <div role="img" aria-label="Menu" className="msb-1">
+              📰
+            </div>
+            <div>Feed</div>
           </div>
-          <div>Menu</div>
-        </div>
-        <div className="text-xl cursor-pointer flex flex-col items-center">
-          <div role="img" aria-label="Share" className="mb-1">
-            🔗
+        </NavLink>
+
+        <NavLink to={"/share"}>
+          <div className="text-xl cursor-pointer flex flex-col items-center">
+            <div role="img" aria-label="Share" className="mb-1">
+              🔗
+            </div>
+            <div>Share</div>
           </div>
-          <div>Share</div>
-        </div>
-        <div className="text-xl cursor-pointer flex flex-col items-center">
-          <div role="img" aria-label="Explore" className="mb-1">
-            🌐
+        </NavLink>
+
+        <NavLink to={"/explore"}>
+          <div className="text-xl cursor-pointer flex flex-col items-center">
+            <div role="img" aria-label="Explore" className="mb-1">
+              🌐
+            </div>
+            <div>Explore</div>
           </div>
-          <div>Explore</div>
-        </div>
+        </NavLink>
       </div>
 
       {/* Profile Section */}
