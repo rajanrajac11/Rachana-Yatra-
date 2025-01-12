@@ -51,6 +51,10 @@ const router = createBrowserRouter([
       //   ),
       // },
       {
+        path: "/approve",
+        element: <Approve />,
+      },
+      {
         path: "/approval",
         element: <Approve />,
       },
