@@ -3,7 +3,7 @@ import logo from "../assets/Logo.png";
 
 function Lcard() {
   return (
-    <div className="flex flex-col items-center text-center h-full">
+    <div className="flex flex-col items-center text-center h-full  ">
       {/* Profile Image or Logo */}
       <div className="w-24 h-24 mb-4">
         <img
@@ -22,11 +22,7 @@ function Lcard() {
       </p>
 
       {/* Footer Links */}
-      <div className="mt-auto text-sm text-gray-500">
-        <p>Privacy · Terms · Advertising</p>
-        <p>Ad Choices · Cookies · More</p>
-        <p>Meta © 2025</p>
-      </div>
+     
     </div>
   );
 }
