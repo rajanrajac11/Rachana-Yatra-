@@ -1,17 +1,18 @@
 import express from "express";
 import mongoose from "mongoose";
-
+import "dotenv/config";
+import literatureRouter from "./routes/literature.route.js";
 const app = express();
+
+app.use("/api/literature/", literatureRouter);
+
 app.get("/", (req, res) => {
   res.send("Server is working");
 });
-
 const port = process.env.PORT || 3001;
 
 mongoose
-  .connect(
-    "mongodb+srv://acharyarajanraj11:LGDoU7GBqKBNXNCT@noska.ne3je.mongodb.net/?retryWrites=true&w=majority&appName=NOSKA"
-  )
+  .connect(process.env.MONGOOSE_DATABASE)
   .then(() => {
     app.listen(port, () => {
       console.log("Cluster connected");
