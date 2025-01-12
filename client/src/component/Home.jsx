@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="p-8 bg-[#F0E6D2] text-[#6B4226] font-serif min-h-screen flex flex-col justify-center items-center">
+    <div className="p-8 bg-[#F0E6D2] text-[#6B4226] font-serif min-h-screen flex flex-col justify-center items-center ">
       <div className="max-w-4xl text-center space-y-8">
         {/* Title */}
         <h1 className="text-5xl font-bold text-[#4E342E] drop-shadow-lg">
