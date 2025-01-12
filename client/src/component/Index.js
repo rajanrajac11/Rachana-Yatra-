@@ -13,6 +13,7 @@ import FeedCard from "./FeedCard.jsx";
 import Input from "./Input.jsx";
 import Select from "./Select.jsx";
 import RTE from "./RTE.jsx";
+import LCard from "./Lcard.jsx";
 
 export {
   Logo,
@@ -30,4 +31,5 @@ export {
   Input,
   Select,
   RTE,
+  LCard,
 };

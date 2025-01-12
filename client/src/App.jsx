@@ -1,4 +1,4 @@
-import { Header, Footer, Lcard } from "./component/Index.js";
+import { Header, Footer } from "./component/Index.js";
 import { Outlet } from "react-router-dom";
 import "./App.css";
 
@@ -12,7 +12,7 @@ function App() {
       <div className="flex flex-1">
         {/* Left Fixed Card */}
         <div className="w-1/3 bg-gray-100 shadow-md fixed h-full p-6 text-center">
-          <Lcard />
+          {/* <Lcard /> */}
         </div>
 
         {/* Dynamic Content with Outlet */}
