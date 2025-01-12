@@ -1,13 +1,26 @@
+
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import Header from "./component/Header";
+import {Header,Footer} from "./component/Index.js";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
-  return <Header />;
+  return (
+    <div className="min-h-screen flex flex-col bg-[#F5F0E1] text-[#4E342E] font-serif">
+      {/* Header */}
+      <Header />
+
+      {/* Main Content */}
+      <main className="flex-grow p-2">
+        <Outlet />
+      </main>
+
+      {/* Footer */}
+      <Footer/>
+    </div>
+  );
 }
 
-export default App;
+export default App
