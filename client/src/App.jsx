@@ -15,11 +15,11 @@ function App() {
         {" "}
         {/* Padding top equal to the height of the header */}
         {/* LCard on the left (Sidebar) */}
-        <div className="w-full md:w-1/4 bg-gray-100 shadow-md p-6">
+        <div className="w-full md:w-1/4 bg-gray-100 shadow-md p-6 rounded-[9%]  mt-6 h-[65%] ml-3  ">
           <LCard />
         </div>
         {/* Dynamic Content (Outlet) */}
-        <main className="w-full md:w-3/4 p-6 overflow-y-auto">
+        <main className="w-full md:w-3/4 p-6 overflow-y-auto ">
           <Outlet />
         </main>
       </div>
