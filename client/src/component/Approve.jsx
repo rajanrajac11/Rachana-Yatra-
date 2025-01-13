@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FeedCard } from "./Index";
+import ApproveCard from "./ApproveCard";
 
 function Approve() {
   const [literatures, setLiteratures] = useState([]);
@@ -49,13 +49,14 @@ function Approve() {
         {!loading &&
           !error &&
           literatures.map((literature) => (
-            <FeedCard
+            <ApproveCard
               key={literature._id} // Use MongoDB's `_id` field
               title={literature.title}
               author={literature.author}
               createdAt={literature.createdAt}
               literatureType={literature.literatureType}
               content={literature.content}
+              id={literature._id}
             />
           ))}
 
