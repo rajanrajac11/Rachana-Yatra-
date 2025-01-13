@@ -14,6 +14,8 @@ import Input from "./Input.jsx";
 import Select from "./Select.jsx";
 import RTE from "./RTE.jsx";
 import LCard from "./Lcard.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
+import APrivateRoute from "./APrivateRoute.jsx";
 
 export {
   Logo,
@@ -32,4 +34,6 @@ export {
   Select,
   RTE,
   LCard,
+  PrivateRoute,
+  APrivateRoute,
 };
