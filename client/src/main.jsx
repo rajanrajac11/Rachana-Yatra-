@@ -11,7 +11,14 @@ import {
   Signup,
   Share,
   Approve,
+  PrivateRoute,
+  Profile,
+  APrivateRoute,
 } from "./component/Index.js";
+import { PersistGate } from "redux-persist/integration/react";
+import { persist } from "./store/store.js";
+import { Provider } from "react-redux";
+import { store } from "./store/store.js";
 
 const router = createBrowserRouter([
   {
@@ -42,28 +49,32 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <Signup />,
       },
-      // {
-      //   path: "/profile",
-      //   element: (
-      //     <PrivateRoute>
-      //       <Profile />
-      //     </PrivateRoute>
-      //   ),
-      // },
       {
-        path: "/approve",
-        element: <Approve />,
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
       },
       {
-        path: "/approval",
-        element: <Approve />,
+        path: "/approve",
+        element: (
+          <APrivateRoute>
+            <Approve />
+          </APrivateRoute>
+        ),
       },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </StrictMode>
+  <Provider store={store}>
+    <PersistGate persistor={persist} loading={null}>
+      <StrictMode>
+        <RouterProvider router={router}></RouterProvider>
+      </StrictMode>
+    </PersistGate>
+  </Provider>
 );
