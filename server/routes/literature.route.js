@@ -1,7 +1,9 @@
 import express from "express";
 import {
+  acceptLiterature,
   getLiteratures,
   getNotApprovedLiteratures,
+  rejectLiterature,
   shareLiterature,
 } from "../controller/literature.controller.js";
 
@@ -13,5 +15,7 @@ literatureRouter.get(
   "/get-non-approved-literatures",
   getNotApprovedLiteratures
 );
+literatureRouter.delete("/reject-literature/", rejectLiterature);
+literatureRouter.put("/accept-literature/", acceptLiterature);
 
 export default literatureRouter;
