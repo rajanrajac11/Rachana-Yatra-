@@ -1,36 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ApproveCard from "./ApproveCard";
+import { useFetch } from "../customApiHook/useFetch";
 
 function Approve() {
-  const [literatures, setLiteratures] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  // Fetching literatures from the API
-  useEffect(() => {
-    const fetchLiteratures = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch(
-          "http://localhost:3001/api/literature/get-non-approved-literatures"
-        );
-
-        if (!response.ok) {
-          throw new Error(`HTTP Error: ${response.status}`);
-        }
-
-        const data = await response.json();
-        setLiteratures(data);
-      } catch (err) {
-        console.error("Error fetching literatures:", err.message);
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchLiteratures();
-  }, []); // Empty dependency array ensures this runs once on mount
+  const { error, loading, data } = useFetch(
+    "http://localhost:3001/api/literature//get-non-approved-literatures"
+  );
 
   return (
     <div className="min-h-screen bg-[#EDE7E3] py-12 px-6 flex flex-col items-center">
@@ -45,7 +20,7 @@ function Approve() {
       <div className="space-y-12 w-full">
         {!loading &&
           !error &&
-          literatures.map((literature) => (
+          data.map((literature) => (
             <ApproveCard
               key={literature._id} // Use MongoDB's `_id` field
               title={literature.title}
@@ -57,7 +32,7 @@ function Approve() {
             />
           ))}
 
-        {!loading && !error && literatures.length === 0 && (
+        {!loading && !error && data.length === 0 && (
           <p className="text-center text-[#6B4226]">No literatures found.</p>
         )}
       </div>
