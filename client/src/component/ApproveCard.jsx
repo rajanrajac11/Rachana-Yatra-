@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png"; // Import the logo image
+import logo from "../assets/logo.png";
 
 function ApproveCard({
   title,
@@ -73,19 +73,16 @@ function ApproveCard({
           </p>
         </div>
 
-        {/* Literature Type */}
         <p className="text-sm md:text-base text-[#6B4226] font-semibold">
           Type: {literatureType}
         </p>
 
-        {/* Published Date */}
         <p className="text-sm md:text-base text-[#8E7C3D] italic font-bold">
           <span className="font-bold">Published On:</span>{" "}
           {new Date(createdAt).toLocaleDateString()}
         </p>
       </div>
 
-      {/* Title */}
       <h2 className="text-2xl md:text-3xl font-bold text-[#4E342E] mt-12">
         {title}
       </h2>

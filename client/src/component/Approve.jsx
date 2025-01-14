@@ -38,13 +38,10 @@ function Approve() {
         साहित्य संग्रह
       </h1>
 
-      {/* Show loading indicator */}
       {loading && <p className="text-center text-[#6B4226]">Loading...</p>}
 
-      {/* Show error if any */}
       {error && <p className="text-center text-red-500">{error}</p>}
 
-      {/* Display FeedCards when data is available */}
       <div className="space-y-12 w-full">
         {!loading &&
           !error &&
@@ -60,7 +57,6 @@ function Approve() {
             />
           ))}
 
-        {/* Show a fallback message if no literatures are available */}
         {!loading && !error && literatures.length === 0 && (
           <p className="text-center text-[#6B4226]">No literatures found.</p>
         )}

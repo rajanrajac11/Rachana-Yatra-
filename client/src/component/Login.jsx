@@ -86,7 +86,7 @@ function Login() {
               type="submit"
               disabled={loading}
               value={loading ? "Loading..." : "Login"}
-              className="cursor-pointer bg-[#7b7047] text-black py-3 rounded-xl hover:bg-[#6E4B31] transition duration-300 w-full"
+              className="cursor-pointer  bg-orange-100 text-black py-3 rounded-xl hover:bg-[#dda377]  transition duration-300 w-full"
             />
           </div>
         </form>

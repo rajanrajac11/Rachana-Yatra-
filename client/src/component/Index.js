@@ -16,6 +16,7 @@ import RTE from "./RTE.jsx";
 import LCard from "./Lcard.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import APrivateRoute from "./APrivateRoute.jsx";
+import ApprovePrivateRoute from "./ApprovePrivateRoute.jsx";
 
 export {
   Logo,
@@ -36,4 +37,5 @@ export {
   LCard,
   PrivateRoute,
   APrivateRoute,
+  ApprovePrivateRoute,
 };

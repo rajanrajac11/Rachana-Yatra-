@@ -8,7 +8,6 @@ function Header() {
 
   return (
     <div className="w-screen h-16 bg-[#FFF2D3] m-0 flex justify-between items-center px-4">
-      {/* Logo Section */}
       <NavLink to={"/"}>
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-16 w-auto" />
@@ -89,7 +88,6 @@ function Header() {
                 alt="Profile Picture"
                 className="h-12 rounded-full object-cover"
               />
-              {console.log(currentUser.profilePicture)}
             </Link>
           ) : (
             <span className="bg-green-200 p-2 rounded-md ">

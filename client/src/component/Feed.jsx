@@ -30,7 +30,7 @@ function Feed() {
     };
 
     fetchLiteratures();
-  }, []); // Empty dependency array ensures this runs once on mount
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#EDE7E3] py-12 px-6 flex flex-col items-center">
@@ -38,19 +38,16 @@ function Feed() {
         साहित्य संग्रह
       </h1>
 
-      {/* Show loading indicator */}
       {loading && <p className="text-center text-[#6B4226]">Loading...</p>}
 
-      {/* Show error if any */}
       {error && <p className="text-center text-red-500">{error}</p>}
 
-      {/* Display FeedCards when data is available */}
       <div className="space-y-12 w-full">
         {!loading &&
           !error &&
           literatures.map((literature) => (
             <FeedCard
-              key={literature._id} // Use MongoDB's `_id` field
+              key={literature._id}
               title={literature.title}
               author={literature.author}
               createdAt={literature.createdAt}

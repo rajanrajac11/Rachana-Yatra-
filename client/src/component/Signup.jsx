@@ -101,7 +101,7 @@ function Signup() {
               type="submit"
               disabled={loading}
               value={loading ? "Loading..." : "Create Account"}
-              className="cursor-pointer  bg-[#8e8256] text-white py-3 rounded-xl hover:bg-[#6E4B31] transition duration-300 w-full"
+              className="cursor-pointer  bg-orange-100 text-black py-3 rounded-xl hover:bg-[#dda377] transition duration-300 w-full"
             />
           </div>
         </form>

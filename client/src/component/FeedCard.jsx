@@ -1,13 +1,10 @@
 import React from "react";
 import logo from "../assets/logo.png"; // Import the logo image
+import { useSelector } from "react-redux";
 
-function FeedCard({
-  title = "Poem",
-  author = "Narayan",
-  createdAt = "20202",
-  literatureType = "poem",
-  content = "123",
-}) {
+function FeedCard({ title, author, createdAt, literatureType, content }) {
+  const { currentUser } = useSelector((state) => state.persistedReducer.user);
+
   return (
     <div className="w-[90%] max-w-[800px] mx-auto p-6 bg-[#F5F0E1] border border-[#DCCFC0] rounded-xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center relative min-h-[300px] md:p-8">
       {/* Top Section: Author, Date, and Type */}
@@ -46,6 +43,29 @@ function FeedCard({
         className="bg-[#FFF9F1] px-4 py-6 rounded-lg shadow-md border border-[#EADBCB] text-left w-full md:w-3/4"
         dangerouslySetInnerHTML={{ __html: content }}
       ></div>
+      {/* comment */}
+      {currentUser ? (
+        <div className="flex justify-between flex-wrap p-4 gap-4 ">
+          <span>Like ❤️</span>
+
+          <input
+            type="text"
+            name=""
+            id="commentInput"
+            placeholder="Write Comment"
+            className="p-1 rounded-md"
+          />
+
+          <span>
+            <label
+              htmlFor="commentInput"
+              className="cursor-pointer p-2 rounded-md bg-[#5e4842] text-white hover:backdrop-opacity-95"
+            >
+              Comment
+            </label>
+          </span>
+        </div>
+      ) : null}
     </div>
   );
 }
