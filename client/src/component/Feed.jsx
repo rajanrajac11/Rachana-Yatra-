@@ -10,11 +10,6 @@ function Feed() {
   if (error) {
     console.log(error);
   }
-  console.log(data);
-
-  if (loading) {
-    console.log("loading");
-  }
 
   return (
     <div className="min-h-screen bg-[#EDE7E3] py-12 px-6 flex flex-col items-center">
