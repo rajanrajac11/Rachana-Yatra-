@@ -1,19 +1,20 @@
 import React from "react";
-import logo from "../assets/Logo.png";
 import { useSelector } from "react-redux";
+import { Logo } from "./Index";
 
 function Lcard() {
   const { currentUser } = useSelector((state) => state.persistedReducer.user);
 
   return (
     <div className="flex flex-col items-center text-center h-full">
-      <div className="w-24 h-24 mb-4">
+      {/* <div className="w-24 h-24 mb-4">
         <img
           src={logo}
           alt="Logo"
           className="w-full h-full rounded-full shadow-lg"
         />
-      </div>
+      </div> */}
+      <Logo />
 
       <h2 className="text-xl font-semibold mb-4">
         Hello, {currentUser ? currentUser.username : "User"}

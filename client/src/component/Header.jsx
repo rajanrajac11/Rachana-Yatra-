@@ -1,18 +1,14 @@
 import React from "react";
-import logo from "../assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Logo } from "./Index";
 
 function Header() {
   const { currentUser } = useSelector((state) => state.persistedReducer.user);
 
   return (
     <div className="w-screen h-16 bg-[#FFF2D3] m-0 flex justify-between items-center px-4">
-      <NavLink to={"/"}>
-        <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-16 w-auto" />
-        </div>
-      </NavLink>
+      <Logo alt="Logo" className="h-16 w-auto" />
 
       {/* Navigation Section */}
       <div className="flex space-x-14">
