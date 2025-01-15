@@ -9,8 +9,7 @@ function LiteratureForm() {
   const { currentUser } = useSelector((state) => state.persistedReducer.user);
 
   const { register, handleSubmit, reset, getValues, control } = useForm();
-
-  const naviate = useNavigate();
+  const [message, setMessage] = useState("");
 
   const post = async (data, e) => {
     e.preventDefault();
@@ -30,13 +29,11 @@ function LiteratureForm() {
         }
       );
       const dataGot = await res.json();
-      console.log(dataGot);
 
       reset();
-      alert("Literature Created Successfully");
-      naviate("/feed");
+      setMessage("Literature Created Successfully!");
     } catch (error) {
-      console.log(error);
+      setMessage("Something went wrong!");
     }
   };
 
@@ -60,6 +57,7 @@ function LiteratureForm() {
               <h2 className="text-3xl font-semibold text-[#6B4226] text-center mb-8">
                 Post New Literature
               </h2>
+
               <form
                 onSubmit={handleSubmit(post)}
                 className="space-y-6 text-[#4E342E] font-serif"
@@ -112,6 +110,13 @@ function LiteratureForm() {
                   >
                     Post Literature
                   </button>
+                </div>
+                <div>
+                  {message && (
+                    <span className="text-green-500 flex justify-center items-center">
+                      {message}
+                    </span>
+                  )}
                 </div>
               </form>
             </>
