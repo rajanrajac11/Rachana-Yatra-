@@ -5,9 +5,7 @@ import { NavLink } from "react-router-dom";
 function Logo({ ...props }) {
   return (
     <>
-      <NavLink to={"/"}>
-        <img src={RyLogo} alt="" {...props} />
-      </NavLink>
+      <img src={RyLogo} alt="" {...props} />
     </>
   );
 }

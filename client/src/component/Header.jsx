@@ -8,8 +8,9 @@ function Header() {
 
   return (
     <div className="w-screen h-16 bg-[#FFF2D3] m-0 flex justify-between items-center px-4">
-      <Logo alt="Logo" className="h-16 w-auto" />
-
+      <NavLink to={"/"}>
+        <Logo alt="Logo" className="h-16 w-auto" />
+      </NavLink>
       {/* Navigation Section */}
       <div className="flex space-x-14">
         <NavLink

@@ -7,13 +7,6 @@ function Lcard() {
 
   return (
     <div className="flex flex-col items-center text-center h-full">
-      {/* <div className="w-24 h-24 mb-4">
-        <img
-          src={logo}
-          alt="Logo"
-          className="w-full h-full rounded-full shadow-lg"
-        />
-      </div> */}
       <Logo />
 
       <h2 className="text-xl font-semibold mb-4">
